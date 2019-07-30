@@ -1,0 +1,14 @@
+public class paaohjelma{
+  public static void main(String[] args){
+    String a = "abc";
+    String b = "abcdefghij";
+    metodeja.tulostus();
+    metodeja.pituus(a);
+    metodeja.pitka(b);
+    metodeja.tulostus();
+    System.out.println(metodeja.kirjaimia());
+
+    
+    
+    
+  }}
