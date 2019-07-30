@@ -1,0 +1,47 @@
+import java.io.*;
+import java.util.Scanner;
+public class skannausKirjoitin{
+  public static void main(String [] args){
+   System.out.println("Anna tiedostonnimi:"); 
+  String tiedostonimi = lue()+".txt";
+  String k = lue();
+  System.out.println("Tieto 1: ");
+  String yksi = lue();
+  System.out.println("tieto 2: ");
+  String kaksi = lue();
+  
+  try{
+ FileWriter kirjoitin =
+                new FileWriter(tiedostonimi);
+
+            BufferedWriter bufferi =
+                new BufferedWriter(kirjoitin);
+
+            bufferi.write(k);
+            bufferi.newLine();
+            
+            bufferi.write("tieto 1: "+yksi);
+            
+            bufferi.newLine();
+            
+            bufferi.write("tieto 2:"+kaksi);
+
+                bufferi.close();
+    
+  }
+  catch(IOException ex){
+  System.out.println("virhe kirjoittaessa "+tiedostonimi);
+  }
+    
+  
+  
+
+  }
+     public static String lue(){
+    Scanner lukija = new Scanner(System.in);
+  System.out.println("Kirjoita jotain");
+  String teksti = lukija.nextLine();
+  return teksti;
+  }
+
+}
