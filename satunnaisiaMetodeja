@@ -1,0 +1,64 @@
+import java.util.Scanner;
+import java.util.Random;
+public class metodeja{
+  public static void tulostus(){
+  System.out.println("terve");
+  }
+  public static int pituus(String a){
+  int b = a.length();
+  return b;
+  }
+  public static void pitka(String a){
+  if (pituus(a)<5)
+    System.out.println("lyhyt");
+  else
+    System.out.println("pitkä");
+  }
+  public static String lukija(){
+  Scanner uusi = new Scanner(System.in);
+  System.out.println("syötä nimi");
+  String nimi = uusi.nextLine();
+  System.out.println("nimi on "+nimi);
+    System.out.println("Syötä luku");
+    int luku = uusi.nextInt();
+    System.out.println("syötit luvun "+luku);
+  String palautus=("nimi on "+nimi);
+  return palautus;
+  }
+  public static void arvuuttaja(){
+    Random satunnainen=new Random();
+    int x = satunnainen.nextInt(50);
+  Scanner a = new Scanner(System.in);
+  System.out.println("Anna arvo:");
+  int luku = a.nextInt();
+  while (luku!=x){
+    if (luku<x){
+    System.out.println("suurempi");
+    luku=a.nextInt();
+    }
+    if (luku>x){
+    System.out.println("pienempi");
+    luku=a.nextInt();
+    }
+    }
+  System.out.println("Arvasti oikein");
+  }
+  public static int kirjaimia(){
+  Scanner sana = new Scanner(System.in);
+  System.out.println("Anna sana");
+  String t = sana.nextLine();
+  System.out.println("Anna merkki");
+  char k = sana.next().charAt(0);
+    int laskuri = 0;
+    for (int i=0; i<t.length();i++){
+      if (t.charAt(i) == k){
+       laskuri++;
+      }
+    }
+     
+    
+    return laskuri;
+  }
+  
+
+  }
