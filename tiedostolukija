@@ -1,0 +1,12 @@
+  import java.io.File;
+  import java.util.Scanner;
+  public class tiedostolukija{
+    public static void main(String[] args) throws Exception
+    {
+      File tiedosto = new File("C:\\Users\\Tutkija\\Desktop\\drjava\\metoditesteja\\tiedkolme.txt");
+    Scanner lukija= new Scanner(tiedosto);
+    while (lukija.hasNextLine()){
+    System.out.println(lukija.nextLine());
+    }
+    }
+  }
