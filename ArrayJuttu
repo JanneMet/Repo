@@ -1,0 +1,46 @@
+
+  import java.util.*;
+  
+public class arrayListtest{
+  public static void main(String[] args){
+    ArrayList<Integer> lista = new ArrayList<Integer>();
+    ArrayList<Integer> toinen = new ArrayList<Integer>();
+    Random rnd=new Random();
+    for (int i = 0; i<7;i++){
+    int a=rnd.nextInt(30);
+    lista.add(a);
+    }
+    for(int i=0;i<9;i++){
+    int a=rnd.nextInt(50);
+    toinen.add(a);
+    }
+    System.out.println(lista);
+    
+    Collections.sort(lista);
+    System.out.println(lista);
+    Collections.sort(toinen);
+    System.out.println(toinen);
+    
+    System.out.println(toinen.get(2));
+    
+    jarkka(lista,toinen);
+  
+    
+  }
+  
+  public static ArrayList<Integer> jarkka(ArrayList<Integer> a, ArrayList<Integer> b){
+    ArrayList<Integer> palautus = new ArrayList<Integer>();
+    for (int i=0;i<a.size();i++){
+      if(a.get(i)>b.get(0)){
+      a.add(i, b.get(0));
+      b.remove(0);
+      System.out.println("a "+a);
+      System.out.println("b "+b);
+      }
+    }
+    System.out.println(a);
+    return palautus;
+  
+  }
+
+}
