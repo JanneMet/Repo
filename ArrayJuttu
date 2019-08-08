@@ -38,6 +38,19 @@ public class arrayListtest{
       System.out.println("b "+b);
       }
     }
+    if (b.size()>0){
+      for (int i=0; i<b.size();i++){
+        a.add(b.get(0));
+      
+      }
+         
+         }
+    System.out.println(a);
+    return palautus;
+  
+  }
+
+}
     System.out.println(a);
     return palautus;
   
