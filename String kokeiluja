@@ -1,0 +1,20 @@
+public class stringKokeilujalisaa{
+  public static void main(String[] Args){
+  String s = "Mielenkiintoinen lause";
+  String num = "123";
+  System.out.println(s.substring(5,s.length()));
+  System.out.println(s.indexOf(' '));
+  System.out.println(s.substring(5));
+  int t = Integer.parseInt(num);
+  System.out.println(t);
+  int[] taul={5,25,47};
+  int j=taul[1];
+  System.out.println(j);
+  String[] ketju={"123","345","abc"};
+  int r=Integer.parseInt(ketju[0]);
+  System.out.println(r);
+
+
+  }
+  
+}
