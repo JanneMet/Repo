@@ -1,0 +1,22 @@
+public class rekursioTesti{
+  public static void main(String[] args){
+  String s="abcd";
+  String k="nyt testataan kunnolla";
+  kaanto(k,0);
+  }
+  public static void kaanto(String a, int b){
+    String palautus="";
+    if (b>=a.length()){
+    palautus=palautus+a.charAt(b-1);
+    return;
+    }
+    else
+      kaanto(a, b+1);
+    palautus=palautus+a.charAt(b);
+    
+    System.out.print(palautus);
+    System.out.println();
+  
+  }
+  
+  }
