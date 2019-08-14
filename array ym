@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class arrayJuttuja{
+  public static void main(String[] Args){
+    ArrayList<String> lista = new ArrayList<>();
+    for (String arg : Args){
+      lista.add(arg);
+    
+    }
+    for(String kohta : lista){
+    System.out.println(kohta);
+    }
+    Random rnd = new Random();
+    
+    ArrayList<Integer> num = new ArrayList<>();
+    for(int i =0; i<10;i++){
+    num.add(rnd.nextInt());
+    }
+    
+    for(Integer kohta : num){
+    System.out.println("ennen järjestelyä "+kohta);
+  }
+Collections.sort(num);
+    
+       for(Integer kohta : num){
+    System.out.println("järjestelyn jälkeen "+kohta);
+        
+}
+}
+}
