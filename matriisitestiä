@@ -1,0 +1,43 @@
+public class matriisitesti{
+  public static void main(String[] args){
+    int yhteensa=0;
+    boolean eka=false;
+    boolean toka=false;
+    int[][] mat={{1,0,1,0},{0,1,1,0},{0,1,1,0}};
+    for(int i=0;i<mat.length;i++){
+      for(int j=0;j<mat[i].length;j++){
+        
+      System.out.println(mat[i][j]);
+      if(mat[i][j]==1){
+        if(j<mat[i].length){
+        yhteensa=yhteensa+alhaalla(mat,i,j);
+        if(j<mat.length){
+        yhteensa=yhteensa+oikealla(mat,i,j);
+        }
+        if(oikealla(mat,i,j)==1 || alhaalla(mat,i,j)==1){
+        mat[i][j]=0;
+        }
+        System.out.println("yhteensa"+yhteensa);
+   
+        
+        }
+      }
+      }}
+  }
+  public static int alhaalla(int[][] k,int c, int d){
+    if(k[c+1][d]==1){
+    return 1;
+    }
+    else
+      return 0;
+    
+  }
+    public static int oikealla(int[][] k,int c, int d){
+    if(k[c][d+1]==1){
+    return 1;
+    }
+    else
+      return 0;
+    
+  }
+}
