@@ -11,8 +11,13 @@ public class matriisitesti{
       if(mat[i][j]==1){
         if(j<mat[i].length){
         yhteensa=yhteensa+alhaalla(mat,i,j);
+        System.out.println("alhaalla "+"i "+i);
+        System.out.println("alhaalla "+"j "+j);
+        }
         if(j<mat.length){
         yhteensa=yhteensa+oikealla(mat,i,j);
+        System.out.println("oikealla "+"i "+i);
+        System.out.println("oikealla "+"j "+j);
         }
         if(oikealla(mat,i,j)==1 || alhaalla(mat,i,j)==1){
         mat[i][j]=0;
@@ -23,13 +28,17 @@ public class matriisitesti{
         }
       }
       }}
-  }
+  
   public static int alhaalla(int[][] k,int c, int d){
-    if(k[c+1][d]==1){
+    if(c+1<k.length){
+    if(k[c+1][d]==1){                      
     return 1;
     }
+    
     else
       return 0;
+    }
+    return 0;
     
   }
     public static int oikealla(int[][] k,int c, int d){
